@@ -1,11 +1,9 @@
 <?php
-
 namespace App\Controllers;
-
-class Home extends BaseController
+class Home extends \CodeIgniter\Controller
 {
-    public function index()
-    {
-        return view('welcome_message');
-    }
+	public function index()
+	{
+		return 'Bem-vindo ao CodeIgniter no Railway!';
+	}
 }
