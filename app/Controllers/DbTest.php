@@ -13,7 +13,7 @@ class Dbtest extends Controller
 			$row = $query->getRow();
 			return "✅ Banco conectado com sucesso!<br>🕒 Hora atual no banco: <strong>{$row->current_time}</strong>";
 		} catch (\Throwable $e) {
-			return "❌ Erro ao conectar no banco:<br><pre>" . $e->getMessage() . "</pre>";
+			return "❌ Erro:<br><pre>" . $e->getMessage() . "</pre>";
 		}
 	}
 }
