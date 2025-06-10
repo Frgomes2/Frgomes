@@ -1,25 +1,24 @@
 FROM php:8.2-apache
 
-# Instala extensões e dependências necessárias
+# Instala extensões necessárias
 RUN apt-get update && apt-get install -y \
-    libpq-dev \
-    unzip zip git curl \
-    && docker-php-ext-install pdo pdo_pgsql pgsql
+    libpq-dev unzip git curl libzip-dev libicu-dev libonig-dev \
+    && docker-php-ext-install pdo pdo_pgsql pgsql intl mbstring zip
 
-# Ativa mod_rewrite para o CodeIgniter
+# Ativa mod_rewrite do Apache
 RUN a2enmod rewrite
 
-# Copia os arquivos do projeto
-COPY . /var/www/html/
-
-# Define permissões corretas
-RUN chown -R www-data:www-data /var/www/html
-
-# Define diretório público como raiz do Apache
+# Define a pasta pública como raiz do Apache
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 
-# Atualiza o Apache para usar o novo DocumentRoot
+# Altera o DocumentRoot no Apache
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
 
-# Expõe a porta padrão
+# Copia o projeto
+COPY . /var/www/html/
+
+# Permissões corretas
+RUN chown -R www-data:www-data /var/www/html/writable \
+    && chmod -R 775 /var/www/html/writable
+
 EXPOSE 80
