@@ -24,25 +24,19 @@ class Database extends Config
     /**
      * The default database connection.
      */
-    public array $default = [
-        'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => '',
-        'password' => '',
-        'database' => '',
-        'DBDriver' => 'MySQLi',
-        'DBPrefix' => '',
-        'pConnect' => false,
-        'DBDebug'  => true,
-        'charset'  => 'utf8',
-        'DBCollat' => 'utf8_general_ci',
-        'swapPre'  => '',
-        'encrypt'  => false,
-        'compress' => false,
-        'strictOn' => false,
-        'failover' => [],
-        'port'     => 3306,
-    ];
+	public $default = [
+		'DSN'      => '',
+		'hostname' => getenv('PGHOST'),
+		'username' => getenv('PGUSER'),
+		'password' => getenv('PGPASSWORD'),
+		'database' => getenv('PGDATABASE'),
+		'DBDriver' => 'Postgre',
+		'port'     => getenv('PGPORT'),
+		'DBDebug'  => (ENVIRONMENT !== 'production'),
+		'charset'  => 'utf8',
+		'DBCollat' => 'utf8_general_ci',
+	];
+
 
     /**
      * This database connection is used when
