@@ -1,19 +1,23 @@
 FROM php:8.2-apache
 
-# Instala extensões para PostgreSQL
-RUN docker-php-ext-install pdo pdo_pgsql pgsql
+# Instala dependências do sistema necessárias
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    libzip-dev \
+    unzip \
+    zip \
+    git \
+    curl \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Ativa o módulo rewrite do Apache (necessário pro CodeIgniter)
+# Ativa mod_rewrite do Apache (necessário pro CI4 funcionar)
 RUN a2enmod rewrite
 
-# Define o diretório de trabalho
+# Define diretório do projeto
 WORKDIR /var/www/html
 
-# Copia todos os arquivos para o container
+# Copia todos os arquivos
 COPY . /var/www/html/
 
-# Ajusta permissões para o Apache acessar os arquivos
+# Corrige permissões
 RUN chown -R www-data:www-data /var/www/html
-
-# Expõe a porta padrão HTTP (usada pelo Railway)
-EXPOSE 80
