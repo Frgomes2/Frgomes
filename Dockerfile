@@ -1,23 +1,22 @@
 FROM php:8.2-apache
 
-# Instala dependências do sistema necessárias
+# Instala dependências
 RUN apt-get update && apt-get install -y \
     libpq-dev \
-    libzip-dev \
-    unzip \
-    zip \
-    git \
-    curl \
+    zip unzip git curl \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Ativa mod_rewrite do Apache (necessário pro CI4 funcionar)
+# Habilita mod_rewrite do Apache
 RUN a2enmod rewrite
 
-# Define diretório do projeto
-WORKDIR /var/www/html
+# Define a pasta pública como diretório de trabalho
+WORKDIR /var/www/html/public
 
-# Copia todos os arquivos
+# Copia o projeto todo
 COPY . /var/www/html/
 
 # Corrige permissões
 RUN chown -R www-data:www-data /var/www/html
+
+# Expõe a porta para o Railway saber qual usar
+EXPOSE 80
