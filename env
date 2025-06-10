@@ -1,2 +1,9 @@
 CI_ENVIRONMENT = development
 app.baseURL = 'https://frgomes-production.up.railway.app/'
+
+database.default.hostname = PGHOST
+database.default.database = PGDATABASE
+database.default.username = PGUSER
+database.default.password = PGPASSWORD
+database.default.DBDriver = Postgre
+database.default.port     = PGPORT
