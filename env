@@ -146,10 +146,9 @@ CI_ENVIRONMENT = development
 
 app.baseURL = 'http://localhost:8080/'
 
-database.default.hostname = PGHOST
-database.default.database = PGDATABASE
-database.default.username = PGUSER
-database.default.password = PGPASSWORD
+database.default.hostname = postgres.railway.internal
+database.default.database = railway
+database.default.username = postgres
+database.default.password = OkgbNBwrOZODgfuVchRErrUkztWQRXAC
 database.default.DBDriver = Postgre
-database.default.port     = PGPORT
-
+database.default.port     = 5432
