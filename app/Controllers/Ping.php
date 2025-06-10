@@ -1,11 +1,10 @@
-<?php namespace App\Controllers;
+<?php
+namespace App\Controllers;
 
-use CodeIgniter\Controller;
-
-class Ping extends Controller
+class Ping extends BaseController
 {
-	public function index()
-	{
-		return "✅ CodeIgniter está rodando!";
-	}
+    public function index()
+    {
+        return '✅ CodeIgniter está rodando!';
+    }
 }
