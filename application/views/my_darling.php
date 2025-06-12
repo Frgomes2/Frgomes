@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="pt-BR"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>❤ Minha Amada ❤</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Sacramento&display=swap');
@@ -308,10 +306,10 @@
 		}
 	</style>
 </head>
-<body>
+<body cz-shortcut-listen="true">
 
 <!-- Fundo com corações animados -->
-<div class="hearts" aria-hidden="true"></div>
+<div class="hearts" aria-hidden="true"><div class="heart" style="left: 14.0203vw; font-size: 24.3697px; animation-delay: 0.720123s; animation-duration: 10.495s;">❤</div><div class="heart" style="left: 80.7216vw; font-size: 35.8554px; animation-delay: 1.03976s; animation-duration: 8.39609s;">❤</div><div class="heart" style="left: 24.5788vw; font-size: 27.4641px; animation-delay: 3.64612s; animation-duration: 9.24848s;">❤</div><div class="heart" style="left: 82.0499vw; font-size: 27.7181px; animation-delay: 2.72761s; animation-duration: 10.9294s;">❤</div><div class="heart" style="left: 45.0548vw; font-size: 20.7236px; animation-delay: 0.645192s; animation-duration: 10.8771s;">❤</div><div class="heart" style="left: 80.093vw; font-size: 14.6004px; animation-delay: 1.64435s; animation-duration: 9.43792s;">❤</div><div class="heart" style="left: 16.9947vw; font-size: 13.0733px; animation-delay: 7.56715s; animation-duration: 11.2115s;">❤</div><div class="heart" style="left: 54.7458vw; font-size: 15.6834px; animation-delay: 8.9161s; animation-duration: 7.08802s;">❤</div><div class="heart" style="left: 54.6286vw; font-size: 13.5942px; animation-delay: 3.56209s; animation-duration: 11.7613s;">❤</div><div class="heart" style="left: 28.4942vw; font-size: 22.3416px; animation-delay: 4.70394s; animation-duration: 11.6417s;">❤</div><div class="heart" style="left: 93.1327vw; font-size: 16.2878px; animation-delay: 0.590211s; animation-duration: 9.17262s;">❤</div><div class="heart" style="left: 17.059vw; font-size: 18.8579px; animation-delay: 0.753403s; animation-duration: 8.67813s;">❤</div><div class="heart" style="left: 61.8888vw; font-size: 30.6619px; animation-delay: 0.513405s; animation-duration: 8.87752s;">❤</div><div class="heart" style="left: 62.7837vw; font-size: 29.8357px; animation-delay: 7.70529s; animation-duration: 8.41041s;">❤</div><div class="heart" style="left: 66.9749vw; font-size: 18.2211px; animation-delay: 0.946978s; animation-duration: 9.54087s;">❤</div><div class="heart" style="left: 59.1342vw; font-size: 12.713px; animation-delay: 6.81255s; animation-duration: 10.1964s;">❤</div><div class="heart" style="left: 67.4985vw; font-size: 23.5533px; animation-delay: 0.242709s; animation-duration: 6.46886s;">❤</div><div class="heart" style="left: 45.856vw; font-size: 13.1334px; animation-delay: 6.25283s; animation-duration: 10.0292s;">❤</div><div class="heart" style="left: 12.4052vw; font-size: 27.5905px; animation-delay: 4.59146s; animation-duration: 11.5435s;">❤</div><div class="heart" style="left: 61.9136vw; font-size: 33.198px; animation-delay: 0.915175s; animation-duration: 11.7323s;">❤</div><div class="heart" style="left: 54.8101vw; font-size: 17.0872px; animation-delay: 3.57594s; animation-duration: 6.71549s;">❤</div><div class="heart" style="left: 59.4484vw; font-size: 31.3517px; animation-delay: 4.57043s; animation-duration: 10.0985s;">❤</div><div class="heart" style="left: 23.5041vw; font-size: 17.0253px; animation-delay: 7.46225s; animation-duration: 7.71466s;">❤</div><div class="heart" style="left: 3.82222vw; font-size: 28.4393px; animation-delay: 6.08664s; animation-duration: 7.2388s;">❤</div><div class="heart" style="left: 96.8231vw; font-size: 27.4496px; animation-delay: 8.38525s; animation-duration: 8.26036s;">❤</div><div class="heart" style="left: 77.4593vw; font-size: 19.0962px; animation-delay: 1.81936s; animation-duration: 11.5207s;">❤</div><div class="heart" style="left: 94.469vw; font-size: 28.2783px; animation-delay: 1.21993s; animation-duration: 7.89302s;">❤</div><div class="heart" style="left: 12.4453vw; font-size: 15.8654px; animation-delay: 8.64818s; animation-duration: 6.87121s;">❤</div><div class="heart" style="left: 9.63654vw; font-size: 15.61px; animation-delay: 1.84702s; animation-duration: 7.7424s;">❤</div><div class="heart" style="left: 83.8056vw; font-size: 33.0337px; animation-delay: 3.53686s; animation-duration: 7.65412s;">❤</div></div>
 
 <header>
 	<h1>❤ Minha Amada ❤</h1>
@@ -320,24 +318,24 @@
 
 <nav aria-label="Navegação do site">
 	<button class="active" id="btn-gallery" aria-controls="gallery" aria-selected="true" role="tab">Fotos</button>
-	<button id="btn-phrases" aria-controls="phrases" aria-selected="false" role="tab">Frases</button>
+	<button id="btn-phrases" aria-controls="phrases" aria-selected="false" role="tab" class="">Frases</button>
 </nav>
 
 <main>
-	<section id="gallery" role="tabpanel" aria-hidden="false">
+	<section id="gallery" role="tabpanel" aria-hidden="false" style="display: block;">
 		<div class="gallery" aria-label="Galeria de fotos">
-			<img src="foto1.jpg" alt="Nós na praia sorrindo" tabindex="0" />
-			<img src="foto2.jpg" alt="Nosso jantar romântico" tabindex="0" />
-			<img src="foto3.jpg" alt="Passeio no parque" tabindex="0" />
-			<img src="foto4.jpg" alt="Viagem inesquecível" tabindex="0" />
-			<img src="foto5.jpg" alt="Abraço apertado" tabindex="0" />
+			<img src="foto1.jpg" alt="Nós na praia sorrindo" tabindex="0">
+			<img src="foto2.jpg" alt="Nosso jantar romântico" tabindex="0">
+			<img src="foto3.jpg" alt="Passeio no parque" tabindex="0">
+			<img src="foto4.jpg" alt="Viagem inesquecível" tabindex="0">
+			<img src="foto5.jpg" alt="Abraço apertado" tabindex="0">
 			<!-- Substitua pelas suas fotos -->
 		</div>
 	</section>
-	<section id="phrases" role="tabpanel" aria-hidden="true" style="display:none; text-align:center;">
+	<section id="phrases" role="tabpanel" aria-hidden="true" style="display: none; text-align: center;">
 		<div class="phrases" aria-live="polite">
-			<p class="phrase active">"Meu amor por você é infinito e cada dia cresce mais."</p>
-			<p class="phrase">"Você é a luz que ilumina meus dias mais escuros."</p>
+			<p class="phrase">"Meu amor por você é infinito e cada dia cresce mais."</p>
+			<p class="phrase active">"Você é a luz que ilumina meus dias mais escuros."</p>
 			<p class="phrase">"Estar ao seu lado é a minha felicidade completa."</p>
 			<p class="phrase">"Com você, sonhar virou realidade."</p>
 			<p class="phrase">"Nosso amor é a melodia mais bonita que já ouvi."</p>
@@ -349,22 +347,22 @@
 <!-- Modal ampliado -->
 <div class="modal" role="dialog" aria-modal="true" aria-label="Visualização da foto">
 	<div class="modal-content">
-		<button class="modal-close" aria-label="Fechar modal">&times;</button>
-		<img src="" alt="" />
+		<button class="modal-close" aria-label="Fechar modal">×</button>
+		<img src="https://www.lncc.br/~borges/php/foto5.jpg" alt="Abraço apertado">
 	</div>
 </div>
 
 <!-- Controle de música -->
 <button aria-label="Tocar / Pausar música" class="music-control" id="music-btn" title="Tocar / Pausar música">
-	<svg id="icon-play" viewBox="0 0 24 24">
-		<path d="M8 5v14l11-7z" />
+	<svg id="icon-play" viewBox="0 0 24 24" style="display: block;">
+		<path d="M8 5v14l11-7z"></path>
 	</svg>
-	<svg id="icon-pause" viewBox="0 0 24 24" style="display:none;">
-		<path d="M6 19h4V5H6zm8-14v14h4V5z"/>
+	<svg id="icon-pause" viewBox="0 0 24 24" style="display: none;">
+		<path d="M6 19h4V5H6zm8-14v14h4V5z"></path>
 	</svg>
 </button>
 
-<audio id="music" loop>
+<audio id="music" loop="">
 	<source src="https://cdn.pixabay.com/download/audio/2022/03/25/audio_3366a460f2.mp3?filename=romantic-piano-10845.mp3" type="audio/mpeg">
 	Seu navegador não suporta áudio.
 </audio>
@@ -481,14 +479,15 @@
 	for (let i = 0; i < heartsCount; i++) {
 		const heart = document.createElement('div');
 		heart.classList.add('heart');
-		heart.style.left = ${Math.random() * 100}vw;
-		heart.style.fontSize = ${12 + Math.random() * 24}px;
-		heart.style.animationDelay = ${Math.random() * 10}s;
-		heart.style.animationDuration = ${6 + Math.random() * 6}s;
+		heart.style.left = `${Math.random() * 100}vw`;
+		heart.style.fontSize = `${12 + Math.random() * 24}px`;
+		heart.style.animationDelay = `${Math.random() * 10}s`;
+		heart.style.animationDuration = `${6 + Math.random() * 6}s`;
 		heart.innerHTML = '❤';
 		heartsContainer.appendChild(heart);
 	}
 </script>
 
-</body>
-</html>
+
+
+</body></html>
