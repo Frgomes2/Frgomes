@@ -1,16 +1,19 @@
 FROM php:8.2-apache
 
-# Ativa o mod_rewrite (necessário para o CI3 funcionar com URLs amigáveis)
+# Ativa o mod_rewrite
 RUN a2enmod rewrite
 
-# Copia os arquivos do projeto pro diretório padrão do Apache
+# Copia os arquivos do projeto
 COPY . /var/www/html/
 
-# Define permissões (garante que o Apache pode ler tudo)
+# Permissões
 RUN chown -R www-data:www-data /var/www/html
 
-# Define o diretório de trabalho
+# Habilita AllowOverride All no Apache (essencial!)
+RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
+
+# Define diretório de trabalho
 WORKDIR /var/www/html
 
-# Expor a porta que o Railway usa
+# Expor porta padrão
 EXPOSE 80
