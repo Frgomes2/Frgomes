@@ -184,17 +184,21 @@
 		}
 		.modal-content {
 			position: relative;
-			max-width: 90vw;
-			max-height: 90vh;
-			border-radius: 30px;
+			width: 100vw;
+			height: 100vh;
+			border-radius: 0;
 			overflow: hidden;
-			box-shadow: 0 0 30px #ff417ccc;
+			box-shadow: none;
+			background: black;
 			animation: popIn 0.5s ease forwards;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		.modal-content img {
-			width: 100%;
-			height: auto;
-			display: block;
+			width: auto;
+			height: 100%;
+			object-fit: contain;
 		}
 		@keyframes popIn {
 			0% {
@@ -318,28 +322,31 @@
 
 <nav aria-label="Navegação do site">
 	<button class="active" id="btn-gallery" aria-controls="gallery" aria-selected="true" role="tab">Fotos</button>
-	<button id="btn-phrases" aria-controls="phrases" aria-selected="false" role="tab" class="">Frases</button>
+	<button id="btn-phrases" aria-controls="phrases" aria-selected="false" role="tab">Frases</button>
 </nav>
 
 <main>
 	<section id="gallery" role="tabpanel" aria-hidden="false" style="display: block;">
 		<div class="gallery" aria-label="Galeria de fotos">
-			<img src="foto1.jpg" alt="Nós na praia sorrindo" tabindex="0">
-			<img src="foto2.jpg" alt="Nosso jantar romântico" tabindex="0">
-			<img src="foto3.jpg" alt="Passeio no parque" tabindex="0">
-			<img src="foto4.jpg" alt="Viagem inesquecível" tabindex="0">
-			<img src="foto5.jpg" alt="Abraço apertado" tabindex="0">
-			<!-- Substitua pelas suas fotos -->
+			<img src="assets/imagens/my_darling/foto1.jpeg" alt="Com você, até no meio da multidão, eu só enxergo o nosso amor.">
+			<img src="assets/imagens/my_darling/foto2.jpeg" alt="Te ter ao meu lado é o meu maior presente todos os dias.">
+			<img src="assets/imagens/my_darling/foto3.jpeg" alt="Seu sorriso ilumina meu coração como o nascer do sol.">
+			<img src="assets/imagens/my_darling/foto4.jpeg" alt="Nossas loucuras juntos são as lembranças mais doces da minha vida.">
+			<img src="assets/imagens/my_darling/foto5.jpeg" alt="Na simplicidade de um momento, mora o nosso infinito.">
+			<img src="assets/imagens/my_darling/foto6.jpeg" alt="Segurar sua mão é segurar o mundo que eu sempre sonhei.">
+			<img src="assets/imagens/my_darling/foto7.jpeg" alt="Com você, até o vento na praia parece dizer ‘eu te amo’.">
+			<img src="assets/imagens/my_darling/foto8.jpeg" alt=".">
 		</div>
 	</section>
 	<section id="phrases" role="tabpanel" aria-hidden="true" style="display: none; text-align: center;">
 		<div class="phrases" aria-live="polite">
-			<p class="phrase">"Meu amor por você é infinito e cada dia cresce mais."</p>
-			<p class="phrase active">"Você é a luz que ilumina meus dias mais escuros."</p>
-			<p class="phrase">"Estar ao seu lado é a minha felicidade completa."</p>
-			<p class="phrase">"Com você, sonhar virou realidade."</p>
-			<p class="phrase">"Nosso amor é a melodia mais bonita que já ouvi."</p>
-			<!-- Adicione mais frases -->
+			<p class="phrase">"Com você, até no meio da multidão, eu só enxergo o nosso amor."</p>
+			<p class="phrase">"Te ter ao meu lado é o meu maior presente todos os dias."</p>
+			<p class="phrase">"Seu sorriso ilumina meu coração como o nascer do sol."</p>
+			<p class="phrase">"Nossas loucuras juntos são as lembranças mais doces da minha vida."</p>
+			<p class="phrase">"Na simplicidade de um momento, mora o nosso infinito."</p>
+			<p class="phrase">"Segurar sua mão é segurar o mundo que eu sempre sonhei."</p>
+			<p class="phrase">"Com você, até o vento na praia parece dizer ‘eu te amo’."</p>
 		</div>
 	</section>
 </main>
@@ -348,145 +355,154 @@
 <div class="modal" role="dialog" aria-modal="true" aria-label="Visualização da foto">
 	<div class="modal-content">
 		<button class="modal-close" aria-label="Fechar modal">×</button>
-		<img src="https://www.lncc.br/~borges/php/foto5.jpg" alt="Abraço apertado">
+		<img src="" alt="">
 	</div>
 </div>
 
-<!-- Controle de música -->
-<button aria-label="Tocar / Pausar música" class="music-control" id="music-btn" title="Tocar / Pausar música">
-	<svg id="icon-play" viewBox="0 0 24 24" style="display: block;">
-		<path d="M8 5v14l11-7z"></path>
-	</svg>
-	<svg id="icon-pause" viewBox="0 0 24 24" style="display: none;">
-		<path d="M6 19h4V5H6zm8-14v14h4V5z"></path>
-	</svg>
-</button>
+
+<div class="modal" role="dialog" aria-modal="true" aria-label="Visualização da foto">
+	<div class="modal-content">
+		<button class="modal-close" aria-label="Fechar modal">×</button>
+		<img src="" alt="">
+	</div>
+</div>
 
 <audio id="music" loop="">
 	<source src="https://cdn.pixabay.com/download/audio/2022/03/25/audio_3366a460f2.mp3?filename=romantic-piano-10845.mp3" type="audio/mpeg">
 	Seu navegador não suporta áudio.
 </audio>
 
+<!-- ✨ Corações + Letras Japonesas de Amor ✨ -->
+<div class="hearts" aria-hidden="true"></div>
+
 <script>
-	// ===== Navegação Fotos x Frases
-	const btnGallery = document.getElementById('btn-gallery');
-	const btnPhrases = document.getElementById('btn-phrases');
-	const gallery = document.getElementById('gallery');
-	const phrases = document.getElementById('phrases');
+	const symbols = ['❤', '愛', '恋', '好き', '永遠', '心'];
+	const heartsContainer = document.querySelector('.hearts');
+	const heartsCount = 40;
 
-	btnGallery.addEventListener('click', () => {
-		btnGallery.classList.add('active');
-		btnGallery.setAttribute('aria-selected', 'true');
-		btnPhrases.classList.remove('active');
-		btnPhrases.setAttribute('aria-selected', 'false');
-		gallery.style.display = 'block';
-		gallery.setAttribute('aria-hidden', 'false');
-		phrases.style.display = 'none';
-		phrases.setAttribute('aria-hidden', 'true');
-	});
+	for (let i = 0; i < heartsCount; i++) {
+		const el = document.createElement('div');
+		el.classList.add('heart');
+		const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+		el.innerHTML = symbol;
+		el.style.left = `${Math.random() * 100}vw`;
+		el.style.fontSize = `${12 + Math.random() * 24}px`;
+		el.style.animationDelay = `${Math.random() * 10}s`;
+		el.style.animationDuration = `${6 + Math.random() * 6}s`;
+		heartsContainer.appendChild(el);
+	}
+</script>
 
-	btnPhrases.addEventListener('click', () => {
-		btnPhrases.classList.add('active');
-		btnPhrases.setAttribute('aria-selected', 'true');
-		btnGallery.classList.remove('active');
-		btnGallery.setAttribute('aria-selected', 'false');
-		phrases.style.display = 'block';
-		phrases.setAttribute('aria-hidden', 'false');
-		gallery.style.display = 'none';
-		gallery.setAttribute('aria-hidden', 'true');
-	});
-
-	// ===== Modal imagens
+<script>
 	const modal = document.querySelector('.modal');
 	const modalImg = modal.querySelector('img');
 	const modalCloseBtn = modal.querySelector('.modal-close');
 	const galleryImgs = document.querySelectorAll('.gallery img');
 
+	// Quando clicar numa imagem
 	galleryImgs.forEach(img => {
 		img.addEventListener('click', () => {
 			modalImg.src = img.src;
 			modalImg.alt = img.alt;
 			modal.classList.add('active');
-			modal.focus();
-		});
-		img.addEventListener('keydown', e => {
-			if (e.key === 'Enter' || e.key === ' ') {
-				e.preventDefault();
-				img.click();
-			}
 		});
 	});
 
+	// Fecha o modal clicando no botão X
 	modalCloseBtn.addEventListener('click', () => {
 		modal.classList.remove('active');
+		modalImg.src = ''; // limpa pra não travar
 	});
+
+	// Fecha clicando fora da imagem
 	modal.addEventListener('click', e => {
 		if (e.target === modal) {
 			modal.classList.remove('active');
+			modalImg.src = '';
 		}
 	});
+
+	// Fecha com ESC
 	document.addEventListener('keydown', e => {
 		if (e.key === 'Escape' && modal.classList.contains('active')) {
 			modal.classList.remove('active');
+			modalImg.src = '';
 		}
 	});
-
-	// ===== Troca automática de frases com fade
-	const phrasesList = document.querySelectorAll('.phrase');
-	let currentPhrase = 0;
-
-	function nextPhrase() {
-		phrasesList[currentPhrase].classList.remove('active');
-		currentPhrase = (currentPhrase + 1) % phrasesList.length;
-		phrasesList[currentPhrase].classList.add('active');
-	}
-
-	setInterval(() => {
-		if (phrases.style.display !== 'none') {
-			nextPhrase();
-		}
-	}, 5000);
-
-	// ===== Música de fundo
-	const music = document.getElementById('music');
-	const musicBtn = document.getElementById('music-btn');
-	const iconPlay = document.getElementById('icon-play');
-	const iconPause = document.getElementById('icon-pause');
-	let isPlaying = false;
-
-	musicBtn.addEventListener('click', () => {
-		if (isPlaying) {
-			music.pause();
-		} else {
-			music.play();
-		}
-	});
-
-	music.onplay = () => {
-		isPlaying = true;
-		iconPlay.style.display = 'none';
-		iconPause.style.display = 'block';
-	};
-	music.onpause = () => {
-		isPlaying = false;
-		iconPlay.style.display = 'block';
-		iconPause.style.display = 'none';
-	};
-
-	// ===== Corações usados no fundo
-	const heartsContainer = document.querySelector('.hearts');
-	const heartsCount = 30;
-	for (let i = 0; i < heartsCount; i++) {
-		const heart = document.createElement('div');
-		heart.classList.add('heart');
-		heart.style.left = `${Math.random() * 100}vw`;
-		heart.style.fontSize = `${12 + Math.random() * 24}px`;
-		heart.style.animationDelay = `${Math.random() * 10}s`;
-		heart.style.animationDuration = `${6 + Math.random() * 6}s`;
-		heart.innerHTML = '❤';
-		heartsContainer.appendChild(heart);
-	}
 </script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const btnGallery = document.getElementById('btn-gallery');
+		const btnPhrases = document.getElementById('btn-phrases');
+		const gallery = document.getElementById('gallery');
+		const phrases = document.getElementById('phrases');
+
+		btnGallery.addEventListener('click', () => {
+			btnGallery.classList.add('active');
+			btnGallery.setAttribute('aria-selected', 'true');
+
+			btnPhrases.classList.remove('active');
+			btnPhrases.setAttribute('aria-selected', 'false');
+
+			gallery.style.display = 'block';
+			gallery.setAttribute('aria-hidden', 'false');
+
+			phrases.style.display = 'none';
+			phrases.setAttribute('aria-hidden', 'true');
+		});
+
+		btnPhrases.addEventListener('click', () => {
+			btnPhrases.classList.add('active');
+			btnPhrases.setAttribute('aria-selected', 'true');
+
+			btnGallery.classList.remove('active');
+			btnGallery.setAttribute('aria-selected', 'false');
+
+			phrases.style.display = 'block';
+			phrases.setAttribute('aria-hidden', 'false');
+
+			gallery.style.display = 'none';
+			gallery.setAttribute('aria-hidden', 'true');
+		});
+	});
+</script>
+
+<style>
+	.hearts {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		pointer-events: none;
+		overflow: hidden;
+		z-index: 0;
+	}
+	.heart {
+		position: absolute;
+		color: #ff5c8d;
+		font-size: 16px;
+		opacity: 0.8;
+		animation-name: floatUp;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes floatUp {
+		0% {
+			transform: translateY(100vh) scale(0.7) rotate(0deg);
+			opacity: 0;
+		}
+		20% {
+			opacity: 0.9;
+		}
+		100% {
+			transform: translateY(-20vh) scale(1.2) rotate(360deg);
+			opacity: 0;
+		}
+	}
+</style>
 
 
 
