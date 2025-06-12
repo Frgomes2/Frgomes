@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/user_guide/database/
  */
+#[\AllowDynamicProperties]
 abstract class CI_DB_driver {
 
 	/**
@@ -426,18 +427,19 @@ abstract class CI_DB_driver {
 				}
 			}
 
-			// We still don't have a connection?
-			if ( ! $this->conn_id)
-			{
-				log_message('error', 'Unable to connect to the database');
 
-				if ($this->db_debug)
-				{
-					$this->display_error('db_unable_to_connect');
-				}
-
-				return FALSE;
-			}
+			 // // We still don't have a connection?
+			 // if ( ! $this->conn_id)
+			 // {
+			 // 	log_message('error', 'Unable to connect to the database');
+			 //
+			 // 	if ($this->db_debug)
+			 // 	{
+			 // 		$this->display_error('db_unable_to_connect');
+			 // 	}
+			 //
+			 // 	return FALSE;
+			 // }
 		}
 
 		// Now we set the character set and that's all
