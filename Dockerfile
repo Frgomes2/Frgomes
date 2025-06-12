@@ -14,4 +14,3 @@ WORKDIR /var/www/html
 
 # Expor a porta que o Railway usa
 EXPOSE 80
-chmod -R 755 application/controllers
