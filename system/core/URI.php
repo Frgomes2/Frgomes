@@ -1,4 +1,5 @@
 <?php
+public $config;
 /**
  * CodeIgniter
  *
