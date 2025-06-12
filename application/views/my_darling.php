@@ -328,14 +328,14 @@
 <main>
 	<section id="gallery" role="tabpanel" aria-hidden="false" style="display: block;">
 		<div class="gallery" aria-label="Galeria de fotos">
-			<img src="assets/imagens/my_darling/foto1.jpeg" alt="Com você, até no meio da multidão, eu só enxergo o nosso amor.">
-			<img src="assets/imagens/my_darling/foto2.jpeg" alt="Te ter ao meu lado é o meu maior presente todos os dias.">
-			<img src="assets/imagens/my_darling/foto3.jpeg" alt="Seu sorriso ilumina meu coração como o nascer do sol.">
-			<img src="assets/imagens/my_darling/foto4.jpeg" alt="Nossas loucuras juntos são as lembranças mais doces da minha vida.">
-			<img src="assets/imagens/my_darling/foto5.jpeg" alt="Na simplicidade de um momento, mora o nosso infinito.">
-			<img src="assets/imagens/my_darling/foto6.jpeg" alt="Segurar sua mão é segurar o mundo que eu sempre sonhei.">
-			<img src="assets/imagens/my_darling/foto7.jpeg" alt="Com você, até o vento na praia parece dizer ‘eu te amo’.">
-			<img src="assets/imagens/my_darling/foto8.jpeg" alt=".">
+			<img src="../assets/imagens/my_darling/foto1.jpeg" alt="Com você, até no meio da multidão, eu só enxergo o nosso amor.">
+			<img src="../assets/imagens/my_darling/foto2.jpeg" alt="Te ter ao meu lado é o meu maior presente todos os dias.">
+			<img src="../assets/imagens/my_darling/foto3.jpeg" alt="Seu sorriso ilumina meu coração como o nascer do sol.">
+			<img src="../assets/imagens/my_darling/foto4.jpeg" alt="Nossas loucuras juntos são as lembranças mais doces da minha vida.">
+			<img src="../assets/imagens/my_darling/foto5.jpeg" alt="Na simplicidade de um momento, mora o nosso infinito.">
+			<img src="../assets/imagens/my_darling/foto6.jpeg" alt="Segurar sua mão é segurar o mundo que eu sempre sonhei.">
+			<img src="../assets/imagens/my_darling/foto7.jpeg" alt="Com você, até o vento na praia parece dizer ‘eu te amo’.">
+			<img src="../assets/imagens/my_darling/foto8.jpeg" alt=".">
 		</div>
 	</section>
 	<section id="phrases" role="tabpanel" aria-hidden="true" style="display: none; text-align: center;">
