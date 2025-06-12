@@ -7,12 +7,12 @@ class Database extends Config
     public string $defaultGroup = 'default';
 	public array $default = [
 		'DSN'      => '',
-		'hostname' => getenv('PGHOST'),
-		'username' => getenv('PGUSER'),
-		'password' => getenv('PGPASSWORD'),
-		'database' => getenv('PGDATABASE'),
+		'hostname' => 'postgres.railway.internal',
+		'username' => 'postgres',
+		'password' => 'OkgbNBwrOZODgfuVChRErrUkztWQRXAC', // <--- senha real
+		'database' => 'railway',
 		'DBDriver' => 'Postgre',
-		'port'     => (int) getenv('PGPORT'), // <-- CORRIGIDO
+		'port'     => 5432,
 		'DBDebug'  => true,
 		'charset'  => 'utf8',
 		'DBCollat' => 'utf8_general_ci',
