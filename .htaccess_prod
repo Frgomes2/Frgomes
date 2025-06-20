@@ -1,17 +1,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
-    # 🔁 Redireciona domínio sem www para www
-    RewriteCond %{HTTP_HOST} ^frgomes\.com\.br$ [NC]
-    RewriteRule ^(.*)$ https://www.frgomes.com.br/$1 [L,R=301]
-
-    # 🔁 Redireciona Railway para www
-    RewriteCond %{HTTP_HOST} ^frgomes-production\.up\.railway\.app$ [NC]
-    RewriteRule ^(.*)$ https://www.frgomes.com.br/$1 [L,R=301]
-
-    # ✅ Regras padrão do CodeIgniter
     RewriteBase /
+
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
+ 
