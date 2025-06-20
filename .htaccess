@@ -1,19 +1,7 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
-    # Detecta se está rodando no localhost (URL)
-    RewriteCond %{HTTP_HOST} ^localhost$
-    RewriteRule ^ - [E=LOCAL_ENV:1]
-
-    # Se LOCAL_ENV = 1, usa RewriteBase /frgomes/
-    RewriteCond %{ENV:LOCAL_ENV} =1
     RewriteBase /frgomes/
 
-    # Se não for localhost, usa raiz /
-    RewriteCond %{ENV:LOCAL_ENV} !=1
-    RewriteBase /
-
-    # Regras padrão
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L]
