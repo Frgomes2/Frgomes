@@ -259,8 +259,7 @@
       <div class="about">
         <div class="about-text">
           <h3>Olá, eu sou o Flavio!</h3>
-          <p>Desenvolvedor Full Stack com X anos de experiência criando soluções web robustas e escaláveis. Apaixonado por resolver problemas complexos através de código limpo e eficiente.</p>
-          <p>Minha abordagem combina habilidades técnicas sólidas com uma compreensão profunda das necessidades do negócio, garantindo que cada projeto atinja seus objetivos de forma eficaz.</p>
+          <p>Desenvolvedor Full Stack com alguns anos de experiência criando soluções web robustas e escaláveis.</p>
         </div>
       </div>
     </div>
