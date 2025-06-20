@@ -1,14 +1,8 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
-    # Detecta se está rodando local (com subpasta) ou produção (raiz)
     RewriteBase /
-
-    RewriteCond %{REQUEST_URI} ^/frgomes/
-    RewriteRule ^frgomes/(.*)$ /index.php/$1 [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
- 
