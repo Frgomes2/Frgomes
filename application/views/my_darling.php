@@ -434,7 +434,7 @@
 <main>
 	<section id="gallery" role="tabpanel" aria-hidden="false" style="display: block;">
 		<div class="gallery" aria-label="Galeria de fotos">
-			<img loading="lazy" src="../assets/imagens/my_darling/foto1.jpeg" alt="Com você, até no meio da multidão, eu só enxergo o nosso amor.">
+			<img loading="lazy" src="assets/imagens/my_darling/foto1.jpeg" alt="Com você, até no meio da multidão, eu só enxergo o nosso amor.">
 			<img loading="lazy" src="../assets/imagens/my_darling/foto2.jpeg" alt="Te ter ao meu lado é o meu maior presente todos os dias.">
 			<img loading="lazy" src="../assets/imagens/my_darling/foto3.jpeg" alt="Seu sorriso ilumina meu coração como o nascer do sol.">
 			<img loading="lazy" src="../assets/imagens/my_darling/foto4.jpeg" alt="Nossas loucuras juntos são as lembranças mais doces da minha vida.">
