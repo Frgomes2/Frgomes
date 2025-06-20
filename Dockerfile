@@ -6,6 +6,9 @@ RUN a2enmod rewrite
 # Copia os arquivos do projeto
 COPY . /var/www/html/
 
+# Substitui o .htaccess_prod como o oficial (dentro do container)
+RUN cp /var/www/html/.htaccess_prod /var/www/html/.htaccess
+
 # Permissões
 RUN chown -R www-data:www-data /var/www/html
 
