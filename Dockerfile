@@ -18,12 +18,11 @@ RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 # Define diretório de trabalho
 WORKDIR /var/www/html
 
-# Substitui a porta padrão 80 pela variável de ambiente $PORT
-RUN sed -i "s/<VirtualHost \*:80>/<VirtualHost *:${PORT}>/" /etc/apache2/sites-available/000-default.conf \
- && echo "Listen ${PORT}" >> /etc/apache2/ports.conf
+# Script de entrada customizado
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-# Railway define a variável PORT automaticamente
-ENV PORT=8080
+# Define a porta exposta (qualquer valor aqui é ignorado no Railway, mas ajuda localmente)
+EXPOSE 8080
 
-# Comando final que inicia o Apache
-CMD ["apache2-foreground"]
+CMD ["/entrypoint.sh"]
