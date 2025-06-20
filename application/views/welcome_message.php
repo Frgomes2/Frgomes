@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+	<meta name="google-site-verification" content="TyQBioCwaZt2EFmBDVG9b9bHHI69zA7DZ7hMltR50Ho" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfólio de Flavio Raphael Gomes - Desenvolvedor Full Stack">
