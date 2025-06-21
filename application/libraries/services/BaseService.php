@@ -7,7 +7,6 @@ class BaseService{
     public function __construct($controller) {
         $this->CI =& get_instance();
         $this->controller = $controller; // Armazena o controller recebido
-        $this->globalLoadingVariables();
     }
 
     public function is_ajax(){
@@ -15,5 +14,9 @@ class BaseService{
             redirect(BASE_URL);
             return false;
         }
+    }
+
+    public function carregaView(&$data,$view){
+        $this->controller->template->load($this->controller->sys_area, $this->controller->sys_module, $view, $data);
     }
 }

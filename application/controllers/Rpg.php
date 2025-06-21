@@ -13,15 +13,11 @@ class  Rpg extends CI_Controller {
     public function __construct() {
         parent::__construct();
 
-        // add library of Pdf
-        $this->load->library('Pdf');
-        $this->load->library('emails/EmailSender');
-
         // Carregar todos os serviços automaticamente
         $this->services = new ServiceLoader($this);
     }
 
     public function index() {
-        $this->services->listService->index(1, $this->total_of_page );
+        $this->services->listService->index();
     }
 }
