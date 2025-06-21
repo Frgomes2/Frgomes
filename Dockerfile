@@ -1,6 +1,10 @@
 FROM php:8.2-apache
 
-# Ativa o mod_rewrite
+# Instala dependências para PostgreSQL
+RUN apt-get update && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
+
+# Ativa mod_rewrite
 RUN a2enmod rewrite
 
 # Copia os arquivos do projeto
@@ -18,14 +22,13 @@ RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 # Define diretório de trabalho
 WORKDIR /var/www/html
 
-# Define variável de ambiente global (production para Railway)
+# Define o ambiente como produção para Railway
 ENV ENV=production
 
-# Script de entrada customizado
+# Entrypoint customizado (se precisar executar algo ao subir)
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-# Expor a porta (Railway ignora, mas bom para testes locais)
 EXPOSE 8080
 
 CMD ["/entrypoint.sh"]
