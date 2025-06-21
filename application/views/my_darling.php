@@ -475,7 +475,7 @@
 
 <script>
 	// ============ [ CONFIGURAÇÕES INICIAIS ] ============
-	const startDate = new Date('2023-05-13'); // Data do início do relacionamento
+	const startDate = new Date('2022-05-13'); // Data do início do relacionamento
 	const symbols = ['❤', '愛', '恋', '好き', '永遠', '心']; // Símbolos para os corações
 	const heartsContainer = document.querySelector('.hearts');
 	const heartsCount = 40;
