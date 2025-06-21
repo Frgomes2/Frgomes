@@ -18,11 +18,14 @@ RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 # Define diretório de trabalho
 WORKDIR /var/www/html
 
+# Define variável de ambiente global (production para Railway)
+ENV ENV=production
+
 # Script de entrada customizado
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-# Define a porta exposta (qualquer valor aqui é ignorado no Railway, mas ajuda localmente)
+# Expor a porta (Railway ignora, mas bom para testes locais)
 EXPOSE 8080
 
 CMD ["/entrypoint.sh"]
