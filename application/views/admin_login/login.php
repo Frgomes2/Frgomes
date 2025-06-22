@@ -11,12 +11,12 @@
     <form method="post" action="admin_login/signin" id="loginForm" name="loginForm" class="parsley-form login100-form validate-form">
       <div class="input-group">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Digite seu email" required />
+        <input type="email" id="email" name="l-username" placeholder="Digite seu email" required />
         <div class="input-icon">✉️</div>
       </div>
       <div class="input-group">
         <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="Digite sua senha" required />
+        <input type="password" id="senha" name="l-password" placeholder="Digite sua senha" required />
         <div class="input-icon">🔒</div>
       </div>
 
