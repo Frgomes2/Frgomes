@@ -27,7 +27,7 @@ if (ENV === 'production') {
 
 } else {
     define("DB_HOST", "localhost");
-    define("DB_BASE", "rpg");
+    define("DB_BASE", "frgomes");
     define("DB_USER", "root");
     define("DB_PASS", "");
     define("BASE_URL", "http://" . $_SERVER['HTTP_HOST'] . "/frgomes/");

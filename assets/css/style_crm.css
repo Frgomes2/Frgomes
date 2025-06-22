@@ -1,0 +1,96 @@
+/*
+01 - Dashboard 
+
+.plataforma-crm - use padrao 
+*/
+
+.plataforma-crm .dash-prospect {
+	text-align: center;
+}
+
+.plataforma-crm  .form-search input {
+	border:0;
+}
+
+.plataforma-crm .form-search a.btn {
+	width: 100%;
+	display: block;
+	min-height: 88px;
+	line-height: 72px;
+	border-radius: 15px;
+}
+
+.plataforma-crm .summar label {
+	font-family: Mulish !important;
+	color: #5E6163  !important;
+}
+.plataforma-crm .summar .card-item-body h4 {
+	color:#192232;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 31px;
+}
+
+.plataforma-crm .summar .card-item-body span.badge {
+	background: #E7F9EF;
+}
+
+.plataforma-crm .summar .card-item-body span.badge-success {
+	color:#11BF61 !important;
+}
+
+.plataforma-crm .dash-prospect .card-item img {
+	margin-bottom: 15px;
+}
+.plataforma-crm .dash-prospect .card-item h3 {
+	color: #131a2c;
+	font-weight: 600;
+	font-size: 22px;
+	font-family: Mulish;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 28px;
+	letter-spacing: 0em;
+	text-align: center;
+	margin-bottom: 10px;
+
+}
+
+.plataforma-crm .dash-prospect .card-item p{
+	font-family: Mulish;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 23px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #5B6167;
+}
+
+.plataforma-crm .dash-prospect .info-extras {
+	position: absolute;
+	right: 10px;
+	top:10px;
+}
+.plataforma-crm .dash-prospect .info-extras span {
+	display: block;
+	margin-bottom: 5px;
+	border-radius: 90px;
+	font-weight: normal;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 19px;
+	min-width: 55px;
+}
+.plataforma-crm .dash-prospect .info-extras span.badge-danger {
+	background: #FBEBEB;
+	color: #D23434 !important;
+
+}
+.plataforma-crm .dash-prospect .info-extras span.badge-warning {
+	background: #FFF6D8;
+	color: #F4C51E !important;
+}

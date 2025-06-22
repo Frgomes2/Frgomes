@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------
+SIC - Sistema Integrado Comil
+
+
+-------------------------------------------------------------------
+
+1.	HEADER
+1.1 Sub-Header Actions
+
+*/
+
+
+/* 1.1 Sub-Header Actions */
+.sub-header {
+    padding: 10px;
+    background: #eee;
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: -7.829px 11.607px 20px 0px rgba(144, 143, 160, 0.09);
+    border-bottom: 1px solid #e1e6f1;
+}
+.sub-header a {
+    margin-left: 5px;
+}

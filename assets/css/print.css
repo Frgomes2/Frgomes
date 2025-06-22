@@ -1,0 +1,231 @@
+@media print {
+    * {
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    }
+
+    *,
+    *:before,
+    *:after {
+        color: #000 !important;
+        text-shadow: none !important;
+        background: transparent !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        font-size: 13px;
+        box-sizing: border-box;
+
+    }
+
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+
+    .navbar {
+        display: none;
+    }
+    .btn > .caret,
+    .dropup > .btn > .caret {
+        border-top-color: #000 !important;
+    }
+    .label {
+        border: 1px solid #000;
+    }
+    .table {
+        border-collapse: collapse !important;
+        /*
+        comentado pq quebrava pagina quando usava tabela
+        page-break-inside: avoid;*/
+    }
+    .table td,
+    .table th {
+        background-color: #fff !important;
+        padding: 3px;
+        text-align: left !important;
+    }
+    .table-bordered th,
+    .table-bordered td {
+        border: 1px solid #ddd !important;
+    }
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: -20px;
+    }
+
+    .d-print-none {
+        display:none;
+    }
+    .dataTables_length{
+        display:none;
+    }
+    .dataTables_info{
+        display:none;
+    }
+    .dataTables_paginate{
+        display:none;
+    }
+    .dataTables_filter{
+        display:none;
+    }
+    .clearfix {
+        clear:both;
+    }
+    table {
+        width: 100%;
+    }
+    .clearfix {
+        clear: both;
+    }
+    /* Esquema de Grid para impressão */
+    .col-print-1 {width:8%;  float:left; padding: 10px;}
+    .col-print-2 {width:16%; float:left; padding: 10px;}
+    .col-print-3 {width:25%; float:left; padding: 10px;}
+    .col-print-4 {width:33%; float:left; padding: 10px;}
+    .col-print-5 {width:42%; float:left; padding: 10px;}
+    .col-print-6 {width:50%; float:left; padding: 10px;}
+    .col-print-7 {width:58%; float:left; padding: 10px;}
+    .col-print-8 {width:66%; float:left; padding: 10px;}
+    .col-print-9 {width:75%; float:left; padding: 10px;}
+    .col-print-10{width:83%; float:left; padding: 10px;}
+    .col-print-11{width:92%; float:left; padding: 10px;}
+    .col-print-12{width:100%; padding: 10px;}
+    .no-padding {padding: 0 !important;}
+
+    .autoHeight {
+        height: auto !important;
+    }
+
+    /* Definição do Topo padrao */
+    .topo-mascarello {
+        margin-bottom: 25px;
+    }
+    .titulo-topo {
+        text-align:right;
+        font-weight: bold;
+        font-size:14px;
+    }
+    .titulo-topo span {
+        font-size:12px;
+    }
+    .tituloPrincipal{
+        padding-top: 20px;
+        font-size:18px;
+        text-align:center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .breakPage {
+        page-break-after: always;
+    }
+    .tdrelative{
+        position:initial;
+    }
+    .porcentagem-background {
+        background: #000 !important;
+    }
+    .table {
+        page-break-after: avoid;
+    }
+
+    .questiontitle {
+        border-top:0;
+        border-left:0;
+        border-right:0;
+    }
+
+    .parsley-errors-list {
+        display:none;
+    }
+    .margin_espaco {
+        margin-left: 30px;
+    }
+
+    .form-control {
+        border: none;
+    }
+
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: transparent;
+    }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: transparent;
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: transparent;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: transparent;
+    }
+    input::placeholder {
+        color: transparent;
+    }
+    textarea::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: transparent;
+    }
+    textarea:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: transparent;
+    }
+    textarea::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: transparent;
+    }
+    textarea:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: transparent;
+    }
+    textarea::placeholder {
+        color: transparent;
+    }
+
+}
