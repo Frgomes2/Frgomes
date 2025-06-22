@@ -47,21 +47,13 @@
     }
 
     .login-container {
-      background: rgba(15, 15, 15, 0.7);
-      border-radius: 24px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 
-                  inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      padding: 48px;
       width: 100%;
-      max-width: 440px;
-      color: #fff;
-      position: relative;
-      z-index: 1;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transform-style: preserve-3d;
-      perspective: 1000px;
+      max-width: 480px; /* controle máximo */
+      padding: 40px 30px;
+      background-color: #111;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+      margin: 100px auto;
     }
 
     h2 {
@@ -241,3 +233,37 @@
       0% { transform: scale(1); opacity: 0.5; }
       100% { transform: scale(1.2); opacity: 0.8; }
     }
+
+    @media (max-width: 480px) {
+      .login-container {
+        width: 90%;
+        padding: 30px 20px;
+        margin: 60px auto;
+        border-radius: 14px;
+      }
+    
+      h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+      }
+    
+      .input-group input {
+        padding: 14px;
+        font-size: 14px;
+      }
+    
+      button {
+        padding: 14px;
+        font-size: 15px;
+      }
+    
+      .forgot a {
+        font-size: 12px;
+      }
+    
+      .input-icon {
+        top: 36px;
+        font-size: 14px;
+      }
+    }
+    

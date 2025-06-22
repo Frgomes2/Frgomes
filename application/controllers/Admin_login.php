@@ -3,16 +3,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once APPPATH . 'libraries/services/ServiceLoader.php';
 
-class Admin extends CI_Controller {
+class Admin_login extends CI_Controller {
 
-    public $sys_area           = "admin";
-    public $sys_module         = "admin";
+    public $sys_area           = "admin_login";
+    public $sys_module         = "admin_login";
     public $total_of_page      = 15;
     public $id_module          = 3;
 
 	public function __construct(){
 		parent::__construct();
-        $this->load->model("Usuarios_model"                 , "usuario");
+        $this->load->model("Users_model"                    , "usuario");
         $this->load->model("Grupopermissoes_model"          , "permissoes");
         $this->load->model("Menus_model"                    , "menus_sistema");
 
@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
         $this->services = new ServiceLoader($this);
 	}
 
-    public function login(){
+    public function index(){
         $this->template->loadsimples('admin_login', 'login.php',[]);
 	}
 

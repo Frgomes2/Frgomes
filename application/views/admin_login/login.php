@@ -8,7 +8,7 @@
   
   <div class="login-container animate__animated animate__fadeIn">
     <h2 class="animate__animated animate__fadeInDown">Faça seu login</h2>
-    <form method="post" action="admin/signin" id="loginForm" name="loginForm" class="parsley-form login100-form validate-form">
+    <form method="post" action="admin_login/signin" id="loginForm" name="loginForm" class="parsley-form login100-form validate-form">
       <div class="input-group">
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="Digite seu email" required />

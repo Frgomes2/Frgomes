@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Usuarios_model extends MY_model {
+class Users_model extends MY_model {
 
     public function __construct() {
         parent::__construct();

@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('Template', 'database');
+$autoload['libraries'] = array('Template', 'database','session');
 
 /*
 | -------------------------------------------------------------------
@@ -132,6 +132,10 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array(
-    "Usuarios_model"            => "users"
+$autoload['model'] = array("Configuracoes_model" => "confg",
+    "Notificacoes_model"    => "notificacoes",
+    "Metadata_model"        => "metadata",
+    "Zhistorico_model"      => "hisuser",
+    "Users_model"           => "users"
 );
+
