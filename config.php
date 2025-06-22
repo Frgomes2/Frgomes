@@ -23,7 +23,7 @@ if (ENV === 'production') {
     define("DB_BASE", $db['dbname'] ?? 'fallback');
     define("DB_USER", $db['user'] ?? 'fallback');
     define("DB_PASS", $db['pass'] ?? 'fallback');
-    define("BASE_URL", "https://frgomes.com.br");
+    define("BASE_URL", "https://frgomes.com.br/");
 
 } else {
     define("DB_HOST", "localhost");
