@@ -10,7 +10,7 @@ class MY_Controller extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if (@!$this->session->userdata("FR_LOGIN"))
-            redirect(BASE_URL . "login");
+            redirect(BASE_URL . "admin_login");
 
         if (@$_GET['debug'] == 1) {
             ini_set('display_errors', '1');
