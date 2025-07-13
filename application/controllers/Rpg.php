@@ -5,7 +5,7 @@ require_once APPPATH . 'libraries/services/ServiceLoader.php';
 
 class  Rpg extends CI_Controller {
     public $sys_area               = "rpg";
-    public $sys_module             = "dashboard";
+    public $sys_module             = "home";
     public $total_of_page          = 15;
     public $id_module              = 1;/*ex:1*/
 

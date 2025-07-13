@@ -13,6 +13,6 @@ class ListService extends RpgBaseService {
 
     public function index(){
         $data = [];
-        $this->carregaView($data,'index');
+        $this->loadingView($data,'index');
     }
 }
