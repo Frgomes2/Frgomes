@@ -1,6 +1,6 @@
 <?php
 
-class My_Controller extends CI_Controller {
+class MY_Controller extends CI_Controller {
 
 
     protected $sendEmail = "P"; /* P -  pendente de envio */

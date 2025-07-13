@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once APPPATH . 'libraries/services/ServiceLoader.php';
 
-class Admin extends My_Controller {
+class Admin extends MY_Controller {
 
     public $sys_area           = "admin";
     public $sys_module         = "dashboard";
