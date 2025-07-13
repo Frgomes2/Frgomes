@@ -4,7 +4,7 @@
     <div class="character-sheet">
     <h1>FICHA DE PERSONAGEM</h1>
     <div class="character-header">
-      <img src="arquivos/rpg/fichas/<?=$personangem->per_id?>/avatar.jpg" alt="Kaelion Avatar" class="character-image">
+      <img src="<?= BASE_URL?>arquivos/rpg/fichas/<?=$personangem->per_id?>/avatar.jpg" alt="Kaelion Avatar" class="character-image">
       <div class="character-info">
         <div class="character-name"><?=$personangem->per_nome?>“<?=$personangem->per_apelido?>”</div>
         <div class="character-class"><?=$personangem->per_classe?></div>

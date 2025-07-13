@@ -1,6 +1,7 @@
 <?php
-namespace Services\Rpg\Ficha;
+namespace Services\Rpg\Home;
 require_once APPPATH . 'libraries/services/rpg/RpgBaseService.php';
+
 use Services\Rpg\RpgBaseService;
 
 class FichaService extends RpgBaseService {
@@ -15,7 +16,7 @@ class FichaService extends RpgBaseService {
         $data = ['extraStyles' => ['ficha_rpg'],'extraScripts' => ['ficha_rpg'],'pk_ficha_rpg' => $pk_ficha_rpg];
         $this->getPersonagem($data);
         $this->getDadosPersonagem($data);
-        $this->carregaView($data,'index');
+        $this->loadingView($data,'ficha');
     }
 
     public function getPersonagem (&$data){

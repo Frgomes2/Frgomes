@@ -13,6 +13,11 @@ class  Rpg extends CI_Controller {
     public function __construct() {
         parent::__construct();
 
+		$this->load->model("Rpg_personages_model"                    	, "rpg_personagens");
+		$this->load->model("Rpg_inventarios_model"                    	, "rpg_inventario");
+		$this->load->model("Rpg_habilidades_model"                    	, "rpg_habilidades");
+		$this->load->model("Rpg_observacoes_model"                    	, "rpg_observacoes");
+
         // Carregar todos os serviços automaticamente
         $this->services = new ServiceLoader($this);
     }
@@ -20,4 +25,8 @@ class  Rpg extends CI_Controller {
     public function index() {
         $this->services->listService->index();
     }
+
+	public function ficha($pk_ficha_rpg = 1) {
+		$this->services->fichaService->index($pk_ficha_rpg);
+	}
 }
