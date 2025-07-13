@@ -21,5 +21,4 @@ class My_Controller extends CI_Controller {
         $systemas = $this->confg->listSystemas();
         $this->load->vars('systemas', $systemas);
     }
-
 }
