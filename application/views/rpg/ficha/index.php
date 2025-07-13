@@ -20,10 +20,10 @@
       <div class="stat-card"><div class="stat-name">Vontade</div><div class="stat-value"><?=$personangem->per_vontade?></div></div>
       <div class="stat-card"><div class="stat-name">Carisma</div><div class="stat-value"><?=$personangem->per_carisma?></div></div>
       <div class="stat-card"><div class="stat-name">Vitalidade</div><div class="stat-value"><?=$personangem->per_vitalidade?></div></div>
-      <div class="stat-card"><div class="stat-name">HP</div><div class="stat-value"><?=$personangem->per_hp?></div></div>
-      <div class="stat-card"><div class="stat-name">Defesa</div><div class="stat-value"><?=$personangem->per_defesa?></div></div>
+      <div class="stat-card"><div class="stat-name">HP</div><div class="stat-value"><?=$personangem->per_hp + ($personangem->per_vitalidade* 2)?></div></div>
+      <div class="stat-card"><div class="stat-name">Defesa</div><div class="stat-value"><?=$personangem->per_defesa + $personangem->per_agilidade?></div></div>
       <div class="stat-card"><div class="stat-name">Iniciativa</div><div class="stat-value">1d20 + <?=$personangem->per_iniciativa?></div></div>
-      <div class="stat-card"><div class="stat-name">Energia</div><div class="stat-value"><?=$personangem->per_energia?></div></div>
+      <div class="stat-card"><div class="stat-name">Energia/Mana</div><div class="stat-value"><?=$personangem->per_energia?></div></div>
     </div>
 
     <div class="section-block">
@@ -34,26 +34,14 @@
     <div class="section-block">
       <h2>HABILIDADES</h2>
       <div class="abilities-grid">
-        <div class="ability-card">
-          <div class="ability-name">Tiro Gambiarra</div>
-          <div>Arma improvisada com munições aleatórias. Pode falhar.</div>
-        </div>
-        <div class="ability-card">
-          <div class="ability-name">Bomba de Fita Isolante</div>
-          <div>Explosão aleatória. Pode atingir aliados. Teste de CAR.</div>
-        </div>
-        <div class="ability-card">
-          <div class="ability-name">Fumaça do Truqueiro</div>
-          <div>Cortina de fumaça que confunde inimigos e facilita fuga.</div>
-        </div>
-        <div class="ability-card">
-          <div class="ability-name">Tiro Gambiarra Hextec</div>
-          <div>Versão melhorada com efeitos baseados na munição.</div>
-        </div>
-        <div class="ability-card">
-          <div class="ability-name">Falha Criticamente Calculada (ULT)</div>
-          <div>Explosão com efeitos aleatórios. Pode causar falhas ou acertos críticos.</div>
-        </div>
+		  <?php if($habilidades):?>
+		  	<?php foreach ($habilidades as  $hab):?>
+				  <div class="ability-card">
+					  <div class="ability-name"><?=nl2br($hab->hab_nome)?></div>
+					  <div><?= nl2br($hab->hab_descricao)?></div>
+				  </div>
+		  	<?php endforeach;?>
+		  <?php endif;?>
       </div>
     </div>
 
