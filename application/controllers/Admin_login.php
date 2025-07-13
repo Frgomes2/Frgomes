@@ -23,7 +23,7 @@ class Admin_login extends CI_Controller {
 
     public function index(){
 		if ($this->session->userdata("FR_LOGIN"))
-			redirect(BASE_URL);
+			redirect(BASE_URL.'admin');
         $this->template->loadsimples('admin_login', 'login.php',[]);
 	}
 
