@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=MedievalSharp&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/rpg.css">
+	<?php if (@$extraStyles): foreach ($extraStyles as $extra): ?><link rel="stylesheet" type="text/css" href="assets/stylesmodulos/<?= $extra ?>.css?<?php echo time();?>"> <?php endforeach; endif;?>
   </head>
   <body>
     <div class="overlay"></div>
@@ -17,4 +18,6 @@
     <?php echo $contents; ?>
     <?php include 'rpg/includes/footer.php'; ?>
   </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <?php if (@$extraScripts): foreach ($extraScripts as $extra): ?><script src="assets/jsmodulos/<?= $extra ?>.js?<?php echo time();?>"></script><?php endforeach; endif;?>
 </html>

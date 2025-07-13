@@ -10,7 +10,8 @@
       <a href="/regras.php" class="navbar-link">Regras</a>
       <a href="/comunidade.php" class="navbar-link">Comunidade</a>
       
-      <?php if (@$_SESSION['RPG_USER']): ?>
+      <?php if(1 > 2):?>
+        <?php if (@$_SESSION['RPG_USER']): ?>
         <span class="user-greeting">
           <i class="fas fa-user"></i> <?php echo htmlspecialchars($username); ?>
         </span>
@@ -42,6 +43,8 @@
           </div>
         </div>
       <?php endif; ?>
+      <?php endif;?>
+
     </div>
   </nav>
   <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" class="floating-dragon" alt="Dragão" loading="lazy">

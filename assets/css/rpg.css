@@ -36,7 +36,7 @@
 
   /* Navbar */
   .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -413,7 +413,7 @@
     }
 
     .container {
-      padding-top: 160px;
+      margin-top: -50px;
     }
 
     .floating-dragon,
