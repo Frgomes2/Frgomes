@@ -31,12 +31,12 @@
         </div>
 
         <div class="page">
-            <?php include("includes/side-menu.php"); ?>
-            <?php include("includes/header.php"); ?>
+            <?php include("admin/includes/side-menu.php"); ?>
+            <?php include("admin/includes/header.php"); ?>
             <div class="main-content side-content pt-0">
                 <?php echo $contents; ?>
             </div>
-            <?php include("includes/footer.php") ?>
+            <?php include("admin/includes/footer.php") ?>
             <?php // include("includes/side-right.php"); ?>
         </div>
 

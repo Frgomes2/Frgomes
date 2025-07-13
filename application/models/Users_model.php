@@ -94,7 +94,7 @@ class Users_model extends MY_model {
     public function login($user, $password) {
 
         return $this->db
-                        ->where($this->prefixo . "usuario", $user)
+                        ->where($this->prefixo . "email", $user)
                         ->where($this->prefixo . "password", $password)
                         ->where($this->prefixo . "status", 1)
                         ->get($this->table)

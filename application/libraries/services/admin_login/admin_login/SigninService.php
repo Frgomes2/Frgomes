@@ -18,7 +18,6 @@ class SigninService extends BaseService{
             $this->getUser($data);
             $this->validUser($data);
             $this->validAcess($data);
-            $this->validAcessExternal($data);
             $this->setMessageSucess($data);
             $this->buildSession($data);
             $this->buildPermissoes($data);
@@ -69,23 +68,13 @@ class SigninService extends BaseService{
         }
     }
 
-    public function validAcessExternal(&$data){
-        if(!in_array($_SERVER["REMOTE_ADDR"], IP_MASCARELLO) && !strstr($_SERVER["REMOTE_ADDR"], "192.168.") && @$data['_user']->usu_externo == 1 && @$data['_user']) {
-            $data['return']['status']       = 'info';
-            $data['return']['title']        = 'Falha!';
-            $data['return']['msg']          = 'Usuário sem privilégio para acesso Externo, entre em contato com os administradores!';
-            $this->controller->hisuser->save("login", "Tentativa Externa", "Tentativa de acesso ao sistema externamente");
-            echo json_encode($data['return']);
-            die();
-        }
-    }
 
     public function setMessageSucess(&$data){
         if(!@$data['return']['status'] && $data['_user']){
             $data['return']['status']       = 'success';
             $data['return']['title']        = 'Sucesso!';
             $data['return']['msg']          = 'Você será direcionado!';
-            $data['return']['url']          = '/sic' . ($data['_user']->usu_lastlogin == null ? '?first=1' : '');
+            $data['return']['url']          = BASE_URL.'admin' . ($data['_user']->usu_lastlogin == null ? '?first=1' : '');
             $this->controller->hisuser->save("login", "Acesso", "Acesso ao sistema");
         }
     }
@@ -106,24 +95,20 @@ class SigninService extends BaseService{
     }
 
     public function buildPreferencias(&$data){
-        @$preferencias = @json_decode(@$_SESSION['SIC_PREFERENCIAS'] , 1);
+        @$preferencias = @json_decode(@$_SESSION['FR_PREFERENCIAS'] , 1);
         if(@$preferencias['idioma']){
-            $this->controller->session->set_userdata("SIC_IDIOMA",@$preferencias['idioma']);
+            $this->controller->session->set_userdata("FR_IDIOMA",@$preferencias['idioma']);
         }
 
-        $_conf_user = @json_decode(@$data['_user']->usu_preferencias, 1);
-        if (@count(@$_conf_user) > 0) {
-            $data['sy'] = $_conf_user['sistema_inicial'];
-        }
 
-        if(!$_SESSION['SIC_IDIOMA']){
-            $this->controller->session->set_userdata("SIC_IDIOMA",1);
+        if(!$_SESSION['FR_IDIOMA']){
+            $this->controller->session->set_userdata("FR_IDIOMA",1);
         }
     }
 
     public function setStartSystem(&$data){
-        $this->controller->session->set_userdata("SIC_PERMISSOES", $data['permissoes']);
-        $this->controller->session->set_userdata("SIC_SYS", $data['sy']);  /* Aqui vamos pegar o sistema padrao do usuário */
+        $this->controller->session->set_userdata("FR_PERMISSOES", $data['permissoes']);
+        $this->controller->session->set_userdata("FR_SYS", $data['sy']);  /* Aqui vamos pegar o sistema padrao do usuário */
         $this->controller->usuario->update(array("usu_lastlogin" => date("Y-m-d H:i:s")), array("usu_id" => $data['_user']->usu_id));
     }
 

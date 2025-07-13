@@ -32,7 +32,8 @@ if (ENV === 'production') {
     define("DB_PASS", "");
     define("BASE_URL", "http://" . $_SERVER['HTTP_HOST'] . "/frgomes/");
 }
-
+define("NAME_SESSION", "FR_");
+define("BASE_SITE",BASE_URL);
 define("DS", DIRECTORY_SEPARATOR);
 define("URL_SITE", "http://" . $_SERVER['HTTP_HOST']);
 define("PATH_THEME", "assets/theme/");

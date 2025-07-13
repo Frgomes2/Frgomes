@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row row-sm">
             <div class="col-md-12 text-right">
-                <span>© 2023 <a href="#">SIC</a></span>
+                <span>© 2023 <a href="#">Frsystem</a></span>
             </div>
         </div>
     </div>
