@@ -5,8 +5,8 @@
       Portal RPGomes
     </a>
     <div class="navbar-links">
-      <a href="rpg" class="navbar-link">Home</a>
-      <a href="rpg/mesas" class="navbar-link">Mesas</a>
+      <a href="<?= BASE_URL?>rpg" class="navbar-link">Home</a>
+      <a href="<?= BASE_URL?>rpg/mesas" class="navbar-link">Mesas</a>
 
       <?php if(1 > 2):?>
         <?php if (@$_SESSION['RPG_USER']): ?>
