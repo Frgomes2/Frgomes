@@ -87,6 +87,15 @@
 				  <button class="btn" id="add-item-btn" style="margin-top: 1rem;">Adicionar Item</button>
 			  </div>
 
+			  <?php if($observacoes[$personangem->per_id]):?>
+				  <div class="section-block">
+					  <?php foreach ($observacoes[$personangem->per_id] as  $obs):?>
+						  <h2><?=nl2br($obs->obs_titulo)?></h2>
+						  <pre><?= nl2br($obs->obs_conteudo)?> </pre>
+					  <?php endforeach;?>
+				  </div>
+			  <?php endif;?>
+
 			  <!-- History -->
 			  <div class="section-block">
 				  <h2>HISTÓRIA</h2>
