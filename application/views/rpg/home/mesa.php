@@ -5,13 +5,17 @@
 		  <div class="panel-header">
 			  <h2>Personagens</h2>
 		  </div>
-		  <div class="character-list" id="character-list"><div class="character-card selected" data-id="1752616062802">
-				  <div class="character-name">FLAVIO RAPHAEL GOMES</div>
-				  <div class="character-info">
-					  <span>teste</span>
-					  <span>undefined</span>
+		  <div class="character-list" id="character-list">
+			  <?php foreach ($personangens as $personangem):?>
+				  <div class="character-card selected" data-id="<?=$personangem->per_id?>">
+					  <div class="character-name">FLAVIO RAPHAEL GOMES</div>
+					  <div class="character-info">
+						  <span><?=@$personangem->per_nome?> / <?=@$personangem->per_apelido?></span>
+						  <span><?=$personangem->per_hp + ($personangem->per_vitalidade* 2)?> HP / <?=$personangem->per_defesa + $personangem->per_agilidade?> Defesa</span>
+					  </div>
 				  </div>
-			  </div></div>
+			  <?php endforeach;?>
+		  </div>
 	  </div>
 
 	  <!-- Character sheet -->
@@ -37,28 +41,36 @@
 					  <div class="stat-card">
 						  <div class="stat-name">Agilidade</div>
 						  <div class="stat-value"><?=$personangem->per_agilidade?></div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">Intelecto</div>
 						  <div class="stat-value"><?=$personangem->per_intelecto?></div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">Vontade</div>
 						  <div class="stat-value"><?=$personangem->per_vontade?></div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">Carisma</div>
 						  <div class="stat-value"><?=$personangem->per_carisma?></div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">Vitalidade</div>
 						  <div class="stat-value"><?=$personangem->per_vitalidade?></div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">HP</div>
 						  <div class="stat-value"><?=$personangem->per_hp + ($personangem->per_vitalidade* 2)?></div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">Defesa</div>
 						  <div class="stat-value"><?=$personangem->per_defesa + $personangem->per_agilidade?></div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">Iniciativa</div>
 						  <div class="stat-value">1d20</div>
-					  </div><div class="stat-card">
+					  </div>
+					  <div class="stat-card">
 						  <div class="stat-name">Energia</div>
 						  <div class="stat-value"><?=$personangem->per_energia?></div>
 					  </div>
