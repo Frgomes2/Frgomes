@@ -4,14 +4,8 @@
     <p>Crie campanhas épicas, desenvolva personagens memoráveis e embarque em aventuras inesquecíveis com seu grupo. Um universo de possibilidades aguarda!</p>
 
     <div class="btn-group">
-      <a href="/mesas.php" class="btn">
+      <a href="/frgomes/rpg/mesas" class="btn">
         <i class="fas fa-dice-d20"></i> Explorar Mesas
-      </a>
-      <a href="/regras.php" class="btn">
-        <i class="fas fa-book"></i> Ver Regras
-      </a>
-      <a href="/comunidade.php" class="btn">
-        <i class="fas fa-users"></i> Comunidade
       </a>
     </div>
 

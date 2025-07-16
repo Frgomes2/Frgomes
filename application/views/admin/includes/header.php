@@ -56,7 +56,7 @@
     <div id="topbar-dropmenu" class="" style="display: none;">
         <div class="topbar-menu row">
             <div class="col-lg-9 col-md-8 col-sm-12 animated animated-short fadeInDown" style="z-index: 1030;">
-                <h4 style="color:#FFF;">Frsystem - Sistemas Integrados Comil</h4>
+                <h4 style="color:#FFF;">Frsystem</h4>
                 <ul  class="top-sistemas">
                     <?php
                     /* Exibirá se o usuário tiver acesso a mais de um sistema */
@@ -76,18 +76,6 @@
                         <?php endif;
                     endforeach;
                     ?>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-12  animated animated-short fadeInDown">
-                <h4 style="color:#FFF;">Outros</h4>
-                <ul class="top-sistemas subdivisao">
-                    <li>
-                        <a target="_blank" href="http://extranet.mascarello.com.br/sim/" class="" style="opacity: 1;">
-                            <span class="glyphicon 	fa fa-tasks"></span>
-                            <span class="metro-title">Teste</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>

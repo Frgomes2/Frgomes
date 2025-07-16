@@ -6,8 +6,8 @@ var Script = function () {
 			const $valueEl = $card.find('.stat-value');
 
 			const $controls = $('<div>').css('margin-top', '10px');
-			const $minus = $('<button>').text('➖').css('margin-right', '5px');
-			const $plus = $('<button>').text('➕');
+			const $minus = $('<button>').text('➖').css('margin-right', '5px').css('cursor', 'pointer');
+			const $plus = $('<button>').text('➕').css('cursor', 'pointer');
 
 			$minus.on('click', function () {
 				let val = parseInt($valueEl.text());

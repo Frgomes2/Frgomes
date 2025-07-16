@@ -26,7 +26,11 @@ class  Rpg extends CI_Controller {
         $this->services->listService->index();
     }
 
-	public function ficha($pk_ficha_rpg = 1) {
-		$this->services->fichaService->index($pk_ficha_rpg);
+	public function mesa($pk_mesa = 1) {
+		$this->services->mesaService->index($pk_mesa);
+	}
+
+	public function mesas() {
+		$this->services->mesasService->index();
 	}
 }

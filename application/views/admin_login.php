@@ -11,7 +11,7 @@
     <link rel="icon" href="<?=BASE_URL?>assets/img/favicon.png" />
 
     <!-- Title -->
-    <title>SIC - Sistema Integrado Comil</title>
+    <title>Frsystem</title>
 
     <!-- Bootstrap css-->
     <link href="<?=BASE_URL?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>

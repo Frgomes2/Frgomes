@@ -5,11 +5,9 @@
       Portal RPGomes
     </a>
     <div class="navbar-links">
-      <a href="/" class="navbar-link">Home</a>
-      <a href="/mesas.php" class="navbar-link">Mesas</a>
-      <a href="/regras.php" class="navbar-link">Regras</a>
-      <a href="/comunidade.php" class="navbar-link">Comunidade</a>
-      
+      <a href="/frgomes/rpg" class="navbar-link">Home</a>
+      <a href="/frgomes/rpg/mesas" class="navbar-link">Mesas</a>
+
       <?php if(1 > 2):?>
         <?php if (@$_SESSION['RPG_USER']): ?>
         <span class="user-greeting">

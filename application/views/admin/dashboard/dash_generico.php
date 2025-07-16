@@ -7,7 +7,7 @@
                         <div class="alert alert-info">
                             <b>Informações</b>
                             <p>
-								Bem-vindo ao Sistema Integrado Comil (Frsystem).<br>
+								Bem-vindo ao Sistema Integrado (Frsystem).<br>
 								Para alterações de conta, basta acessar suas preferências de configurações <a style="font-weight: bold" href="/sic/profile">Clique aqui para alterar</a>
                             </p>
                         </div>
