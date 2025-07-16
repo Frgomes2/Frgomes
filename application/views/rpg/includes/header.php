@@ -1,6 +1,6 @@
  <!-- Navbar -->
  <nav class="navbar">
-    <a href="/" class="navbar-brand">
+    <a href="<?= BASE_URL?>rpg" class="navbar-brand">
       <i class="fas fa-dragon"></i>
       Portal RPGomes
     </a>
