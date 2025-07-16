@@ -30,8 +30,8 @@ class MesaService extends RpgBaseService {
 				$filtro_habilidade['order']['hab_ordem_exibicao'] 	= 'asc';
 				$filtro_habilidade[] 								= "hab_pk_personagem = {$personagem->per_id}";
 				$data['habilidades'][$personagem->per_id]			= $this->controller->rpg_habilidades->listAllPaginator($filtro_habilidade);
-				$data['inventario'][$personagem->per_id] 			= $this->controller->rpg_inventario->listAllPaginator(['inv_pk_personagem = "'.$personagem->per_id.'"']);
-				$data['observacoes'][$personagem->per_id] 			= $this->controller->rpg_observacoes->listAllPaginator(['obs_pk_personagem = "'.$personagem->per_id.'"']);
+				$data['inventario'][$personagem->per_id] 			= $this->controller->rpg_inventario->listAllPaginator(["inv_pk_personagem = {$personagem->per_id}"]);
+				$data['observacoes'][$personagem->per_id] 			= $this->controller->rpg_observacoes->listAllPaginator(["obs_pk_personagem = {$personagem->per_id}"]);
 			}
 		}
 	}
